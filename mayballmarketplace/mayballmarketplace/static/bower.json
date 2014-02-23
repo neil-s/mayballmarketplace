@@ -1,0 +1,24 @@
+{
+  "name": "May Ball MarketPlace",
+  "version": "0.0.1",
+  "homepage": "https://github.com/neil-s/mayballmarketplace",
+  "authors": [
+    "Gideon Farrell <me@gideonfarrell.co.uk>",
+    "Raphael Scheps <raph@rscheps.com>",
+    "Neil Satra <?>",
+    "James McAuley <?>"
+  ],
+  "main": "js/main.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">3.0"
+  }
+}
