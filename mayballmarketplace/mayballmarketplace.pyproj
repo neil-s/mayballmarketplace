@@ -31,6 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="marketplaceapp\models.py" />
+    <Compile Include="marketplaceapp\tests.py" />
+    <Compile Include="marketplaceapp\urls.py" />
+    <Compile Include="marketplaceapp\views.py" />
+    <Compile Include="marketplaceapp\__init__.py" />
     <Compile Include="mayballmarketplace\__init__.py" />
     <Compile Include="mayballmarketplace\settings.py" />
     <Compile Include="mayballmarketplace\urls.py" />
@@ -49,6 +54,8 @@
     </WebPiReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="marketplaceapp\" />
+    <Folder Include="marketplaceapp\templates\" />
     <Folder Include="mayballmarketplace\" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +69,9 @@
       <LibraryPath>Lib\</LibraryPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="marketplaceapp\templates\index.html" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <ProjectExtensions>
