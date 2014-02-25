@@ -49,8 +49,13 @@ module.exports = function(Grunt) {
 		// Watch task for watching files to build out
 		// https://github.com/gruntjs/grunt-contrib-watch
 		watch: {
-			files: ['style/*.less', 'style/**/*.less'],
-			tasks: ['less:dev']
+			options: {
+				livereload: true
+			},
+			styles: {
+				files: ['style/*.less', 'style/**/*.less'],
+				tasks: ['less:dev']
+			}
 		}
 	});
 }
