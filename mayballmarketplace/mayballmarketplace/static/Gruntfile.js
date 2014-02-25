@@ -3,6 +3,7 @@ module.exports = function(Grunt) {
 	// Load external tasks
 	Grunt.loadNpmTasks('grunt-contrib-less');
 	Grunt.loadNpmTasks('grunt-contrib-requirejs');
+	Grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Configure Grunt tasks, etc..
 	Grunt.initConfig({
@@ -44,6 +45,12 @@ module.exports = function(Grunt) {
 					dir: "dist"
 				}
 			}
+		},
+		// Watch task for watching files to build out
+		// https://github.com/gruntjs/grunt-contrib-watch
+		watch: {
+			files: ['style/*.less', 'style/**/*.less'],
+			tasks: ['less']
 		}
 	});
 }
