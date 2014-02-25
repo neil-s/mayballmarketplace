@@ -50,7 +50,7 @@ module.exports = function(Grunt) {
 		// https://github.com/gruntjs/grunt-contrib-watch
 		watch: {
 			files: ['style/*.less', 'style/**/*.less'],
-			tasks: ['less']
+			tasks: ['less:dev']
 		}
 	});
 }
