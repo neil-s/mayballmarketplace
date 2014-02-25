@@ -17,6 +17,8 @@ module.exports = function(Grunt) {
 			dev: {
 				options: {
 					sourceMap: true,
+					compress: false,
+					cleancss: false
 				},
 				files: {
 					"dist/styles.dev.css": "style/styles.less"
