@@ -4,9 +4,9 @@
   "homepage": "https://github.com/neil-s/mayballmarketplace",
   "authors": [
     "Gideon Farrell <me@gideonfarrell.co.uk>",
-    "Raphael Scheps <raph@rscheps.com>",
+    "Raphael Scheps <raphael@rscheps.com>",
     "Neil Satra <?>",
-    "James McAuley <?>"
+    "James McAulay <jddm2@cam.ac.uk>"
   ],
   "main": "js/main.js",
   "license": "MIT",
