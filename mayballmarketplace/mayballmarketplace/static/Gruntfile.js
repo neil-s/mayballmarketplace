@@ -2,6 +2,7 @@
 module.exports = function(Grunt) {
 	// Load external tasks
 	Grunt.loadNpmTasks('grunt-contrib-less');
+	Grunt.loadNpmTasks('grunt-contrib-requirejs');
 
 	// Configure Grunt tasks, etc..
 	Grunt.initConfig({
@@ -28,6 +29,19 @@ module.exports = function(Grunt) {
 				files: {
 					"dist/styles.css": "style/styles.less"
 				}
+			}
+		},
+		// Require.js task for compiling javascript
+		// https://github.com/gruntjs/grunt-contrib-requirejs
+		// More info: https://github.com/jrburke/r.js/blob/master/build/example.build.js
+		// This is for production only
+		requirejs: {
+			compile: {
+				baseUrl: "js",
+				mainConfigFile: "js/main.js",
+				optimize: "uglify",
+				out: 'dist/main.js',
+				
 			}
 		}
 	});
