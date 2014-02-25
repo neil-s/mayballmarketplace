@@ -1,0 +1,10 @@
+{
+  "name": "mayballmarkeplace",
+  "version": "0.0.1",
+  "devDependencies": {
+	"bower": "*",
+	"grunt": ">0.4.0",
+	"grunt-contrib-less": "~0.9.0",
+	"clean-css": "~2.1.1"
+  }
+}
