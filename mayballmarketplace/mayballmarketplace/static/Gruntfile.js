@@ -37,11 +37,12 @@ module.exports = function(Grunt) {
 		// This is for production only
 		requirejs: {
 			compile: {
-				baseUrl: "js",
-				mainConfigFile: "js/main.js",
-				optimize: "uglify",
-				out: 'dist/main.js',
-				
+				options: {
+					baseUrl: "js",
+					mainConfigFile: "js/main.js",
+					optimize: "uglify",
+					dir: "dist"
+				}
 			}
 		}
 	});
