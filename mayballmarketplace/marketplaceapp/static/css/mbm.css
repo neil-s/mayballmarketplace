@@ -1,0 +1,41 @@
+body {
+	background-color: #ecf0f1;
+}
+
+.navbar-inverse .navbar-inner {
+	background-color: #e74c3c;
+	background-image: none;
+}
+
+a {
+	color: #fff;
+}
+
+.navbar .brand, .inverse-navbar .brand, .navbar .nav>li>a {
+	color: #fff !important;
+}
+
+.hero-unit {
+	background-color: #e74c3c;
+	color: #fff;
+}
+
+.well {
+	background-color: #e74c3c;
+	color: #fff;
+}
+
+.nav-header {
+	color: #fff;
+	text-shadow: none !important;
+	font-size: 14px;
+}
+
+.span6 {
+	background-color: #e74c3c;
+	color: #fff;
+	padding-left: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
