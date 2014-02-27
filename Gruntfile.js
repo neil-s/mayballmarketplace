@@ -1,5 +1,7 @@
 /* global module */
 module.exports = function(Grunt) {
+	'use strict';
+
 	// Load external tasks
 	Grunt.loadNpmTasks('grunt-contrib-less');
 	Grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -12,7 +14,7 @@ module.exports = function(Grunt) {
 		// Two targets: dev, production
 		less: {
 			options: {
-				paths: ['style', 'lib']
+				paths: ['mayballmarketplace/static/less', 'mayballmarketplace/static/lib']
 			},
 			dev: {
 				options: {
@@ -21,7 +23,7 @@ module.exports = function(Grunt) {
 					cleancss: false
 				},
 				files: {
-					"dist/styles.dev.css": "style/styles.less"
+					'mayballmarketplace/static/dist/styles.dev.css': 'mayballmarketplace/static/less/styles.less'
 				}
 			},
 			production: {
@@ -30,7 +32,7 @@ module.exports = function(Grunt) {
 					cleancss: true
 				},
 				files: {
-					"dist/styles.css": "style/styles.less"
+					'mayballmarketplace/static/dist/styles.css': 'mayballmarketplace/static/less/styles.less'
 				}
 			}
 		},
@@ -41,10 +43,12 @@ module.exports = function(Grunt) {
 		requirejs: {
 			compile: {
 				options: {
-					baseUrl: "js",
-					mainConfigFile: "js/main.js",
-					optimize: "uglify",
-					dir: "dist"
+					baseUrl: 'mayballmarketplace/static/js',
+					mainConfigFile: 'mayballmarketplace/static/js/main.js',
+					optimize: 'uglify',
+					keepBuildDir: true,
+					name: 'main',
+					out: 'mayballmarketplace/static/dist/main.js'
 				}
 			}
 		},
@@ -55,9 +59,13 @@ module.exports = function(Grunt) {
 				livereload: true
 			},
 			styles: {
-				files: ['style/*.less', 'style/**/*.less'],
+				files: ['mayballmarketplace/static/less/*.less', 'mayballmarketplace/static/less/**/*.less'],
 				tasks: ['less:dev']
+			},
+			scripts: {
+				files: ['mayballmarketplace/static/js/*.js', 'mayballmarketplace/static/js/**/*.js']
+				// probably should add some jshint tasks in here at some point
 			}
 		}
 	});
-}
+};

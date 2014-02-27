@@ -8,7 +8,7 @@
     "Neil Satra <?>",
     "James McAulay <jddm2@cam.ac.uk>"
   ],
-  "main": "js/main.js",
+  "main": "mayballmarketplace/static/js/main.js",
   "license": "MIT",
   "private": true,
   "ignore": [

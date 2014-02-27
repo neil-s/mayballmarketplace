@@ -5,11 +5,11 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
-	<link href="../static/css/bootstrap-fluid-adj.css " rel="stylesheet">
-	<link href="../static/css/bootstrap.min.css " rel="stylesheet" media="screen">
-	<link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="../static/css/mbm.css" rel="stylesheet">
+	
+	<!-- Development CSS -->
+	<link href="static/dist/styles.dev.css" rel="stylesheet" type="text/css" />
+	<!-- Production CSS -->
+	<!-- <link href="static/dist/styles.css" rel="stylesheet" type="text/css" /> -->
 
 	<title>May Ball Market - Trinity</title>
 
@@ -134,8 +134,11 @@
 	<hr/>
 
 
-	<script src="../static/js/bootstrap.min.js"></script>
-
+	<!-- Scripts at the bottom for efficiency -->
+	<!-- Development -->
+	<script language="javascript" type="text/javascript" src="static/lib/requirejs/require.js" data-main="static/js/main.js"></script>
+	<!-- Production -->
+	<!-- <script language="javascript" type="text/javascript" src="static/lib/requirejs/require.js" data-main="static/dist/main.js"></script> -->
 </body>
 </html>
 
