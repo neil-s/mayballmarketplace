@@ -1,16 +1,15 @@
 """
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
+Run these unit tests using "manage.py test".
 """
+
+from datetime import timedelta
 
 from django.test import TestCase
 from marketplaceapp.models import *
-from datetime import date, timedelta
+
 
 class EventTests(TestCase):
-    def test_event_tommorow(self):
+    def test_event_tomorrow(self):
         tomorrow = date.today() + timedelta(days=1)
         event = Event(name="Pembroke Test Event", start_date=tomorrow)
         self.assertTrue(event.is_not_in_past)
