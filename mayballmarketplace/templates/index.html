@@ -1,4 +1,4 @@
-
+{% load staticfiles %}
 <!DOCTYPE html>
 
 
@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Development CSS -->
-	<link href="static/dist/styles.dev.css" rel="stylesheet" type="text/css" />
-	<!-- Production CSS -->
-	<!-- <link href="static/dist/styles.css" rel="stylesheet" type="text/css" /> -->
+    <link href="{% static 'dist/styles.dev.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- Production CSS -->
+    <!-- <link href="static/dist/styles.css" rel="stylesheet" type="text/css" /> -->
 
 	<title>May Ball Market - Trinity</title>
 
@@ -136,9 +136,10 @@
 
 	<!-- Scripts at the bottom for efficiency -->
 	<!-- Development -->
-	<script language="javascript" type="text/javascript" src="static/lib/requirejs/require.js" data-main="static/js/main.js"></script>
-	<!-- Production -->
-	<!-- <script language="javascript" type="text/javascript" src="static/lib/requirejs/require.js" data-main="static/dist/main.js"></script> -->
+    <script language="javascript" type="text/javascript" src="{% static 'lib/requirejs/require.js' %}"
+            data-main="{% static 'js/main.js' %}"></script>
+    <!-- Production -->
+    <!-- <script language="javascript" type="text/javascript" src="{% static 'lib/requirejs/require.js' %}" data-main="{% static 'dist/main.js' %}"></script> -->
 </body>
 </html>
 
