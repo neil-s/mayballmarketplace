@@ -6,6 +6,9 @@ module.exports = function(Grunt) {
 	Grunt.loadNpmTasks('grunt-contrib-less');
 	Grunt.loadNpmTasks('grunt-contrib-requirejs');
 	Grunt.loadNpmTasks('grunt-contrib-watch');
+	
+	// Task registration
+	Grunt.registerTask('default', ['less:dev', 'watch']);
 
 	// Configure Grunt tasks, etc..
 	Grunt.initConfig({
