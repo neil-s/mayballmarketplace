@@ -17,3 +17,14 @@ def event_offers(request, event_id="1", slug=""):
 def event_list(request):
     events = get_list_or_404(Event, start_date__gte=date.today())  # start_date >= date.today()
     return render(request, 'event_list.html', {'events': events})
+
+
+def match_offer(request, offer_id):
+    offer = get_object_or_404(Offer, pk=offer_id)
+    # If it's a buy offer, user_action = sell, and vice versa.
+    user_action = offer.action
+    if request.method == "GET":
+        return render(request, 'match.html', {'offer': offer, 'user_action': user_action})
+    elif request.method == "POST":
+        return render(request, 'match.html', {'offer': offer, 'user_action': user_action})
+
